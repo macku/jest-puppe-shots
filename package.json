@@ -1,0 +1,38 @@
+{
+  "name": "jest-puppe-shots",
+  "version": "0.2.0",
+  "description": "A Jest plugin for rendering React components and matching their screenshots in Visual Regression tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/macku/jest-puppe-shots.git"
+  },
+  "keywords": [
+    "jest",
+    "screenshot",
+    "snapshot",
+    "testing",
+    "unittest",
+    "react",
+    "enzyme",
+    "javascript",
+    "js",
+    "visual-regression",
+    "visual-testing",
+    "matcher",
+    "jest-matcher",
+    "unit-testing"
+  ],
+  "author": {
+    "name": "Maciej Adamczak",
+    "email": "git@maciejadamczak.net"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/macku/jest-puppy-shots/issues"
+  },
+  "homepage": "https://github.com/macku/jest-puppe-shots#readme"
+}
