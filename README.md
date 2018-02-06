@@ -9,7 +9,6 @@ Code comming soon
 ```js
 const { mount } = require('jest-puppe-shots');
 
-// 1. Sync API
 test('should render <Foo> component', async () => {
   const wrapper = await mount(
     <MyComponent className="my-component">
@@ -26,14 +25,14 @@ test('should render <Foo> component', async () => {
 ```js
 const { mount } = require('jest-puppe-shots');
 
-test('should render <MyComponent> component', () => {
-  const wrapper = mount(
+test('should render <MyComponent> component', async () => {
+  const wrapper = await mount(
     <MyComponent className="my-component">
       <strong>Hello World!</strong>
     </MyComponent>
   );
   
-   expect(wrapper).toMatchScreenshot({ // Pass viewport size
+  return expect(wrapper).toMatchScreenshot({ // Pass viewport size
      width: 800,
      height: 600
    });
@@ -55,6 +54,6 @@ test('should render <Boo> component', async () => {
    const children = await wrapper.find('.custom-class');
    await children.simulate('click');
   
-   expect(children).toMatchScreenshot();
+   return expect(children).toMatchScreenshot();
 });
 ```

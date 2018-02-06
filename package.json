@@ -1,6 +1,6 @@
 {
   "name": "jest-puppe-shots",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A Jest plugin for rendering React components and matching their screenshots in Visual Regression tests",
   "main": "index.js",
   "scripts": {
@@ -19,7 +19,6 @@
     "react",
     "enzyme",
     "javascript",
-    "js",
     "visual-regression",
     "visual-testing",
     "matcher",
