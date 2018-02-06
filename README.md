@@ -7,7 +7,7 @@ Code comming soon
 ## Example usage
 
 ```js
-const { mount } = require('jest-puppeshots');
+const { mount } = require('jest-puppe-shots');
 
 // 1. Sync API
 test('should render <Foo> component', async () => {
@@ -24,7 +24,7 @@ test('should render <Foo> component', async () => {
 ### Viewport
 
 ```js
-const { mount } = require('jest-puppeshots');
+const { mount } = require('jest-puppe-shots');
 
 test('should render <MyComponent> component', () => {
   const wrapper = mount(
@@ -43,7 +43,7 @@ test('should render <MyComponent> component', () => {
 ### Enzyme-like API
 
 ```js
-const { mount } = require('jest-puppeshots');
+const { mount } = require('jest-puppe-shots');
 
 test('should render <Boo> component', async () => {
   const wrapper = await mount(
