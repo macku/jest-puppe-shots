@@ -1,0 +1,6 @@
+/.editorconfig
+/.idea
+/images
+/.gitignore
+/.npmignore
+/npm-debug.log*

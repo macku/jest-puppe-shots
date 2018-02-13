@@ -1,8 +1,8 @@
 {
   "name": "jest-puppe-shots",
-  "version": "0.2.1",
-  "description": "A Jest plugin for rendering React components and matching their screenshots in Visual Regression tests",
-  "main": "index.js",
+  "version": "0.3.1",
+  "description": "A Jest plugin for creating screenshots of React components with a help of Puppeteer",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,15 +23,38 @@
     "visual-testing",
     "matcher",
     "jest-matcher",
-    "unit-testing"
+    "unit-testing",
+    "puppeteer",
+    "chrome"
   ],
   "author": {
     "name": "Maciej Adamczak",
-    "email": "git@maciejadamczak.net"
+    "email": "npm@maciejadamczak.net"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/macku/jest-puppy-shots/issues"
+    "url": "https://github.com/macku/jest-puppe-shots/issues"
   },
-  "homepage": "https://github.com/macku/jest-puppe-shots#readme"
+  "homepage": "https://github.com/macku/jest-puppe-shots#readme",
+  "peerDependencies": {
+    "jest": ">= 22.0.0",
+    "react": ">= 15.0.0",
+    "react-dom": ">= 15.0.0"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "fs-extra": "^5.0.0",
+    "jest-environment-jsdom": ">= 22.0.0",
+    "jest-environment-node": ">= 22.0.0",
+    "jest-image-snapshot": "^2.3.0",
+    "lodash.kebabcase": "^4.1.1",
+    "pixelmatch": "^4.0.2",
+    "pngjs": "^3.3.1",
+    "puppeteer": "^1.0.0",
+    "styled-components": ">= 2.0.0"
+  },
+  "devDependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
 }
