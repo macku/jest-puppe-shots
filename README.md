@@ -224,7 +224,7 @@ module.exports = config;
 
 3. Right now you can run unit tests as usual by `npm run test` and you can launch integration tests by running `npm run test:screenshots`
 
-## 3. I'm using `styled-components` to provide my CSS code. Is it supported?
+## I'm using `styled-components` to provide my CSS code. Is it supported?
 That's fine. Good news for you is that `jest-puppe-shots` is supporting [`styled-components`](https://www.styled-components.com/).
 All you need to do is to inform runner that you would like to use a custom renderer.
 
@@ -233,7 +233,7 @@ Edit your Jest config file `jest.config.json` and add new `globals` entry to the
 ```json
 {
   "globals": {
-    "__JEST_PUPPE_RENDERER__": "REACT_SERVER"
+    "__JEST_PUPPE_RENDERER__": "STYLED_COMPONENTS"
   }
 }
 ``` 
