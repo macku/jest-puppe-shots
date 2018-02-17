@@ -42,7 +42,7 @@ npm install jest react-dom
 The `jest-puppe-shots` API is written on top of the **Puppeteer** which means the currently supported version of **Node is 7.6+**.
 You will also have to setup your **Babel** configuration to use the [Async/Await from ES7](https://developers.google.com/web/fundamentals/primers/async-functions).
 
-[Here you can find the tutorial](https://babeljs.io/docs/plugins/transform-async-to-generator/) how to setup your **Babel** settings to use it. 
+[Here you can find the tutorial](https://babeljs.io/docs/plugins/transform-async-to-generator/) how to setup your **Babel** settings to use it.
 
 Jest Configuration
 ==================
@@ -64,16 +64,16 @@ Taking Screenshots
 ==================
 
 After setting up the configuration you can start writing your first integration test that will take screenshots.
-The `jest-puppe-shot` it utilizing a couple of concepts and tools under the hood:
+The `jest-puppe-shots` it utilizing a couple of concepts and tools under the hood:
 
  - It's using [**Puppeteer**](https://github.com/GoogleChrome/puppeteer) to start Chromium browser in the headless mode
- - It takes a Screenshot of the component and stores it as a  **Snapshot** inside your repository under the `__image_snapshots__` directory. 
+ - It takes a Screenshot of the component and stores it as a  **Snapshot** inside your repository under the `__image_snapshots__` directory.
    If you are not familiar with the Jest Snapshots testing take a look at [Jest documentation page](https://facebook.github.io/jest/docs/en/snapshot-testing.html).
- - Uses the [`.toMatchImageSnapshot()`](https://www.npmjs.com/package/jest-image-snapshot) matcher to compare the base screenshot with the current version token during the test execution. 
+ - Uses the [`.toMatchImageSnapshot()`](https://www.npmjs.com/package/jest-image-snapshot) matcher to compare the base screenshot with the current version token during the test execution.
 
-# Writing First Integration Test 
+# Writing First Integration Test
 Take a look at the example test code:
- 
+
 ```js
 const { openNewPage } = require('jest-puppe-shots'); // 1. Require the jest-puppe-shots module into your test
 import { openNewPage } from 'jest-puppe-shots'; // or use the ES module import if you like
@@ -91,9 +91,9 @@ test('should render <Foo> component', async () => {
       <strong>Hello World!</strong>
     </MyComponent>
   );
-  
+
   const screenshot = page.takeScreenshot(component); // 5. Take a screenshot of your component
-  
+
   expect(screenshot).toMatchImageSnapshot(); // 6. Assert image snapshots and you're done!
 });
 ```
@@ -118,7 +118,7 @@ beforeEach(async () => {
     'css/custom-styles.css'
   ]))
 });
-``` 
+```
 
 Mounting the CSS directory might also help you with loading static content files like **images** or **font**.
 
@@ -153,7 +153,7 @@ Roadmap
    mounting component
  - [ ] Making screenshots of component parts by ex. selecting DOM nodes
  - [ ] More built-in renderers and support for custom renderers (pass a function)
- - [ ] Debugging: allow to start test without the headless mode and see what browser is doing  
+ - [ ] Debugging: allow to start test without the headless mode and see what browser is doing
 
 FAQ
 ===
@@ -162,7 +162,7 @@ FAQ
 You will have to install Jest 22+. The main reason of that is [version 22 introduced](https://github.com/facebook/jest/blob/master/CHANGELOG.md#features-9) the [`globalSetup` and `globalTeardown`](https://github.com/facebook/jest/pull/4716) options APIs.
 
 ## What Node version is supported?
-Since both **Puppeteer** and `jest-puppe-shots` are heavily depending on the `async/await` API you will have to use **Node 7.6+** that [enabled the support for it](https://blog.readme.io/using-async-await-in-node-js-7-6-0/).   
+Since both **Puppeteer** and `jest-puppe-shots` are heavily depending on the `async/await` API you will have to use **Node 7.6+** that [enabled the support for it](https://blog.readme.io/using-async-await-in-node-js-7-6-0/).
 
 ## I don't want to run Puppeteer each time I'm running my tests. It takes *ages* to start Jest and it's getting slow!
 
@@ -192,7 +192,7 @@ No problem! You don't need to launch Puppeteer for you regular Unit Tests. You w
 }
 ```
 
-We are using the [`cross-env`](https://www.npmjs.com/package/cross-env) package in order to set environment variables for all the operating systems.   
+We are using the [`cross-env`](https://www.npmjs.com/package/cross-env) package in order to set environment variables for all the operating systems.
 
 2. Rename your `jest.config.json` to `jest.config.js` and adjust the source code to use `jest-puppe-shots` hooks only when we need it.
 
@@ -236,7 +236,7 @@ Edit your Jest config file `jest.config.json` and add new `globals` entry to the
     "__JEST_PUPPE_RENDERER__": "STYLED_COMPONENTS"
   }
 }
-``` 
+```
 
 Currently, there are two supported renderers:
 
