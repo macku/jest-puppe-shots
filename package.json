@@ -49,10 +49,10 @@
     "jest-environment-jsdom": ">= 22.0.0",
     "jest-environment-node": ">= 22.0.0",
     "jest-image-snapshot": "^2.3.0",
-    "lodash.kebabcase": "^4.1.1",
     "pixelmatch": "^4.0.2",
     "pngjs": "^3.3.2",
-    "puppeteer": "^1.1.0"
+    "puppeteer": "^1.1.0",
+    "rimraf": "^2.6.2"
   },
   "devDependencies": {
     "eslint": "^4.18.0",
