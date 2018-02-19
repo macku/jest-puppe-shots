@@ -2,9 +2,9 @@
 =================
 
 [![NPM version](https://badge.fury.io/js/jest-puppe-shots.svg)](https://www.npmjs.com/package/jest-puppe-shots)
-[![Dependencies](https://david-dm.org/macku/jest-puppe-shots.svg)](https://david-dm.org/macku/jest-puppe-shots)
-[![devDependency Status](https://david-dm.org/macku/jest-puppe-shots/dev-status.svg)](https://david-dm.org/macku/jest-puppe-shots#info=devDependencies)
-[![optionalDependency Status](https://david-dm.org/macku/jest-puppe-shots/optional-status.svg)](https://david-dm.org/macku/jest-puppe-shots#info=optionalDependencies)
+[![dependencies Status](https://david-dm.org/macku/jest-puppe-shots/status.svg)](https://david-dm.org/macku/jest-puppe-shots)
+[![devDependencies Status](https://david-dm.org/macku/jest-puppe-shots/dev-status.svg)](https://david-dm.org/macku/jest-puppe-shots?type=dev)
+[![peerDependencies Status](https://david-dm.org/macku/jest-puppe-shots/peer-status.svg)](https://david-dm.org/macku/jest-puppe-shots?type=peer)
 
 A [Jest](https://facebook.github.io/jest/) plugin for creating screenshots of [React](https://reactjs.org/) components with a little help of [Puppeteer](https://github.com/GoogleChrome/puppeteer)
 
@@ -149,6 +149,7 @@ Both `loadExternalCss` and `loadExternalJs` function can accept multiple argumen
 Roadmap
 =======
 
+ - [ ] Transform the `*.less` and `*.sass` files itto **CSS**  code when importing component modules by Jest 
  - [ ] Better support for the [`Eznyme`](airbnb.io/enzyme) like API. You should be able to use ex. `get`, or `find` functions after
    mounting component
  - [ ] Making screenshots of component parts by ex. selecting DOM nodes
