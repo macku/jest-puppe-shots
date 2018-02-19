@@ -2,6 +2,7 @@
 =================
 
 [![NPM version](https://badge.fury.io/js/jest-puppe-shots.svg)](https://www.npmjs.com/package/jest-puppe-shots)
+[![node](https://img.shields.io/node/v/jest-puppe-shots.svg)](https://www.npmjs.com/package/jest-puppe-shots)
 [![dependencies Status](https://david-dm.org/macku/jest-puppe-shots/status.svg)](https://david-dm.org/macku/jest-puppe-shots)
 [![devDependencies Status](https://david-dm.org/macku/jest-puppe-shots/dev-status.svg)](https://david-dm.org/macku/jest-puppe-shots?type=dev)
 [![peerDependencies Status](https://david-dm.org/macku/jest-puppe-shots/peer-status.svg)](https://david-dm.org/macku/jest-puppe-shots?type=peer)

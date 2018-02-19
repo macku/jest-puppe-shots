@@ -63,5 +63,9 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "styled-components": "^2.0.0"
+  },
+  "engines": {
+    "node": ">= 7.6",
+    "npm": ">= 5.0.0"
   }
 }
