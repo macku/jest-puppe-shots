@@ -1,6 +1,6 @@
 {
   "name": "jest-puppe-shots",
-  "version": "0.3.3-beta",
+  "version": "0.3.3",
   "description": "A Jest plugin for creating screenshots of React components with a help of Puppeteer",
   "main": "lib/index.js",
   "scripts": {
