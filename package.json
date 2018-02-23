@@ -4,8 +4,9 @@
   "description": "A Jest plugin for creating screenshots of React components with a help of Puppeteer",
   "main": "lib/index.js",
   "scripts": {
-    "lint": "eslint lib",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint lib tests",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",
@@ -55,14 +56,17 @@
     "styled-components": "^2.0.0"
   },
   "devDependencies": {
+    "css": "^2.2.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
     "eslint": "^4.18.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.6.1",
+    "jest": "^22.4.2",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "styled-components": "^2.0.0"
+    "react-dom": "^16.2.0"
   },
   "engines": {
     "node": ">= 7.6",
