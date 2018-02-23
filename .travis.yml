@@ -1,0 +1,18 @@
+language: node_js
+
+node_js:
+  - "lts/*"
+  - "8"
+  - "7.6"
+
+cache:
+  directories:
+    - "node_modules"
+
+install:
+  - npm install
+
+script:
+  - npm run lint
+  - npm run test
+  - npm run build
