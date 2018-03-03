@@ -12,7 +12,7 @@ A [Jest](https://facebook.github.io/jest/) plugin for creating screenshots of [R
 
 How it works?
 =============
-A `jest-puppe-shots` is a **Jest** plugin that can help you create **Visual Regression** tests for your Rect components.
+A `jest-puppe-shots` is a **Jest** plugin that can help you create **Visual Regression** tests for your React components.
 If you ever used [**Enzyme**](http://airbnb.io/enzyme/) or [**Snapshots**](https://facebook.github.io/jest/docs/en/snapshot-testing.html) you will love the `jest-puppe-shots`.
 
 The Snapshot testing approach is really awesome but it has one downside: it cannot be used to make visual regression tests of your components.
@@ -102,7 +102,7 @@ test('should render <Foo> component', async () => {
 
 Running this code for the first time by Jest, will produce a **Base Screenshot** and store it inside the repository at `your-test-location/__image_snapshots__` directory.
 
-To update the **Base Screenshot** run Jest with `--updateSnapshot` or `-u` params.
+To update the **Base Screenshot** run Jest with `--updateSnapshot` or `-u` parameter.
 
 # Mounting additional CSS
 
@@ -236,7 +236,7 @@ Edit your Jest config file `jest.config.json` and add new `globals` entry to the
 ```json
 {
   "globals": {
-    "__JEST_PUPPE_RENDERER__": "STYLED_COMPONENTS"
+    "__JEST_PUPPE_SHOTS_RENDERER__": "STYLED_COMPONENTS"
   }
 }
 ```
