@@ -4,9 +4,9 @@
 [![NPM version](https://badge.fury.io/js/jest-puppe-shots.svg)](https://www.npmjs.com/package/jest-puppe-shots)
 [![node](https://img.shields.io/node/v/jest-puppe-shots.svg)](https://www.npmjs.com/package/jest-puppe-shots)
 [![Build Status](https://travis-ci.org/macku/jest-puppe-shots.svg?branch=master)](https://travis-ci.org/macku/jest-puppe-shots)
-[![dependencies Status](https://david-dm.org/macku/jest-puppe-shots/status.svg)](https://david-dm.org/macku/jest-puppe-shots)
-[![devDependencies Status](https://david-dm.org/macku/jest-puppe-shots/dev-status.svg)](https://david-dm.org/macku/jest-puppe-shots?type=dev)
-[![peerDependencies Status](https://david-dm.org/macku/jest-puppe-shots/peer-status.svg)](https://david-dm.org/macku/jest-puppe-shots?type=peer)
+[![dependencies Status](https://david-dm.org/macku/jest-puppe-shots/status.svg?path=packages/jest-puppe-shots)](https://david-dm.org/macku/jest-puppe-shots?path=packages/jest-puppe-shots)
+[![devDependencies Status](https://david-dm.org/macku/jest-puppe-shots/dev-status.svg?path=packages/jest-puppe-shots)](https://david-dm.org/macku/jest-puppe-shots?path=packages/jest-puppe-shots&type=dev)
+[![peerDependencies Status](https://david-dm.org/macku/jest-puppe-shots/peer-status.svg?path=packages/jest-puppe-shots)](https://david-dm.org/macku/jest-puppe-shots?path=packages/jest-puppe-shots&type=peer)
 
 A [Jest](https://facebook.github.io/jest/) plugin for creating screenshots of [React](https://reactjs.org/) components with a little help of [Puppeteer](https://github.com/GoogleChrome/puppeteer)
 
@@ -50,17 +50,23 @@ Jest Configuration
 ==================
 Before starting using the `jest-puppe-shots` you will need to change your Jest configuration file.
 
-Open the **jest.config.json** file and add additional entries:
+Open the `jest.config.json` file in your project and add additional entry:
 
 ```json
 {
-  "testEnvironment": "jest-puppe-shots/lib/node-environment.js",
-  "globalSetup": "jest-puppe-shots/lib/global-setup.js",
-  "globalTeardown": "jest-puppe-shots/lib/global-teardown.js"
+  "preset": "jest-puppe-shots-preset"
 }
 ```
 
-Those hooks are responsible for launching the **Puppeteer** in the background while the **Jest** runner is starting.
+If you are are using the `jest.config.js` file, then instead adjust your configuration like this:
+ 
+```js
+module.exports = {
+  // You config goes here
+
+  preset: 'jest-puppe-shots-preset'
+}
+```
 
 Taking Screenshots
 ==================
@@ -197,14 +203,12 @@ No problem! You don't need to launch Puppeteer for you regular Unit Tests. You w
 
 We are using the [`cross-env`](https://www.npmjs.com/package/cross-env) package in order to set environment variables for all the operating systems.
 
-2. Rename your `jest.config.json` to `jest.config.js` and adjust the source code to use `jest-puppe-shots` hooks only when we need it.
+2. Rename your `jest.config.json` to `jest.config.js` and adjust the source code to use `jest-puppe-shots` preset only when we need it.
 
 ### Before
 ```json
 {
-  "testEnvironment": "jest-puppe-shots/lib/node-environment.js",
-  "globalSetup": "jest-puppe-shots/lib/global-setup.js",
-  "globalTeardown": "jest-puppe-shots/lib/global-teardown.js"
+  "preset": "jest-puppe-shots-preset"
 }
 ```
 
@@ -215,11 +219,7 @@ let config = {
 };
 
 if (process.env.TAKE_SCREENSHOTS) {
-  config = Object.assign({
-    testEnvironment: 'jest-puppe-shots/lib/node-environment.js',
-    globalSetup: 'jest-puppe-shots/lib/global-setup.js',
-    globalTeardown: 'jest-puppe-shots/lib/global-teardown.js'
-  });
+  config.preset = 'jest-puppe-shots-preset';
 }
 
 module.exports = config;
