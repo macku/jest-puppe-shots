@@ -1,6 +1,7 @@
-const Page = require('./page-mount-api');
+const server = require('./server/server');
+const { getServerUri } = require('./server/config');
 
 module.exports = {
-  Page,
-  openNewPage: Page.openNewPage,
+  server,
+  getServerUri,
 };

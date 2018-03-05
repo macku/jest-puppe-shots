@@ -1,15 +1,12 @@
 const fs = require('fs');
 const path = require('path');
-const { toMatchImageSnapshot } = require('jest-image-snapshot');
 
-const { getServerUri } = require('./server/config');
+const { server, getServerUri } = require('jest-puppe-shots-env');
+
 const { createRenderer, REACT_SERVER } = require('./renderer/renderer');
-const { mountStaticPath } = require('./server/server');
 const { createElementScreenshot } = require('./make-screenshot');
 
 const GLOBAL_RENDERER_KEY = '__JEST_PUPPE_SHOTS_RENDERER__';
-
-global.expect.extend({ toMatchImageSnapshot });
 
 const resolvePath = (pathToResolve) => {
   const resolvedPath = fs.realpathSync(pathToResolve);
@@ -58,7 +55,7 @@ class Page {
     const paths = files.map(filePath => path.join(staticPathContext, filePath));
 
     // Serve static files from context
-    mountStaticPath(appContext, staticPathContext, staticPath);
+    server.mountStaticPath(appContext, staticPathContext, staticPath);
 
     const addStyles = paths.map(url => this.page.addStyleTag({ url }));
 
