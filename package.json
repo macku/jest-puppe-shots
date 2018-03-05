@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "jest-puppe-shots-monorepo",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "A Jest plugin for creating screenshots of React components with a help of Puppeteer",
   "scripts": {
     "lint": "eslint .",
