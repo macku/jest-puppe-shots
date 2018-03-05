@@ -41,7 +41,8 @@
   "dependencies": {
     "styled-components": "^2.0.0",
     "jest-image-snapshot": "^2.3.0",
-    "jest-puppe-shots-env": "0.5.0"
+    "jest-puppe-shots-env": "^0.5.1",
+    "jest-puppe-shots-preset": "^0.5.1"
   },
   "devDependencies": {
     "css": "^2.2.1",
