@@ -1,0 +1,8 @@
+{
+  "testEnvironment": "jest-puppe-shots-env/lib/node-environment.js",
+  "globalSetup": "jest-puppe-shots-env/lib/global-setup.js",
+  "globalTeardown": "jest-puppe-shots-env/lib/global-teardown.js",
+  "globals": {
+    "__JEST_PUPPE_RENDERER__": "REACT_SERVER"
+  }
+}

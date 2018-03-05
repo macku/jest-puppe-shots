@@ -1,0 +1,45 @@
+{
+  "name": "jest-puppe-shots-preset",
+  "version": "0.5.0",
+  "description": "A Jest plugin for creating screenshots of React components with a help of Puppeteer",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/macku/jest-puppe-shots.git"
+  },
+  "keywords": [
+    "jest",
+    "screenshot",
+    "snapshot",
+    "testing",
+    "unittest",
+    "react",
+    "enzyme",
+    "javascript",
+    "visual-regression",
+    "visual-testing",
+    "matcher",
+    "jest-matcher",
+    "unit-testing",
+    "puppeteer",
+    "chrome"
+  ],
+  "author": {
+    "name": "Maciej Adamczak",
+    "email": "npm@maciejadamczak.net"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/macku/jest-puppe-shots/issues"
+  },
+  "homepage": "https://github.com/macku/jest-puppe-shots#readme",
+  "peerDependencies": {
+    "jest": ">= 22.0.0"
+  },
+  "dependencies": {
+    "jest-puppe-shots-env": "^0.5.0"
+  },
+  "engines": {
+    "node": ">= 7.6",
+    "npm": ">= 5.0.0"
+  }
+}
