@@ -15,7 +15,7 @@ const resolvePath = (pathToResolve) => {
 };
 
 class Page {
-  static async openNewPage(browser = global.browser) {
+  static async openNewPage(browser = global.__BROWSER__) {
     return new Page(browser).openNewPage();
   }
 

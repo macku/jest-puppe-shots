@@ -5,6 +5,8 @@ const { tmpdir } = require('os');
 const NodeEnvironment = require('jest-environment-node');
 const puppeteer = require('puppeteer');
 
+const { startServer, closeServer } = require('./server/server');
+
 const DIR = join(tmpdir(), 'jest_puppeteer_global_setup');
 
 class PuppeteerNodeEnvironment extends NodeEnvironment {
@@ -13,23 +15,29 @@ class PuppeteerNodeEnvironment extends NodeEnvironment {
 
     const wsEndpoint = readFileSync(join(DIR, 'wsEndpoint'), 'utf8');
 
-
     if (!wsEndpoint) {
       throw new Error('wsEndpoint not found');
     }
 
-    // TODO: this can be borrowed from `global.__BROWSER__`
     const browser = await puppeteer.connect({
       browserWSEndpoint: wsEndpoint,
     });
 
-    const { __APP_SERVER__, __SERVER__ } = global;
+    const { app, server } = await startServer();
 
     Object.assign(this.global, {
-      __APP_SERVER__,
-      __SERVER__,
-      browser,
+      __APP_SERVER__: app,
+      __SERVER__: server,
+      __BROWSER__: browser,
     });
+  }
+
+  async teardown() {
+    const { __SERVER__: server } = this.global;
+
+    await closeServer(server);
+
+    await super.teardown();
   }
 }
 

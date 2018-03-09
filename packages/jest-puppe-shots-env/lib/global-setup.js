@@ -4,21 +4,15 @@ const { tmpdir } = require('os');
 const puppeteer = require('puppeteer');
 const { mkdirpSync } = require('fs-extra');
 
-const { startServer } = require('./server/server');
-
 const DIR = join(tmpdir(), 'jest_puppeteer_global_setup');
 
 module.exports = async function globalSetup() {
-  const { app, server } = await startServer();
-
   const browser = await puppeteer.launch({
-    headless: true, // TODO: Allow to configure it
-    devtools: false, // TODO: Allow to configure it
+    headless: true,
+    devtools: false,
   });
 
   global.__BROWSER__ = browser;
-  global.__APP_SERVER__ = app;
-  global.__SERVER__ = server;
 
   mkdirpSync(DIR);
   writeFileSync(join(DIR, 'wsEndpoint'), browser.wsEndpoint());
