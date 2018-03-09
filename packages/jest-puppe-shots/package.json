@@ -45,9 +45,9 @@
     "styled-components": "^2.0.0"
   },
   "devDependencies": {
-    "css": "^2.2.1",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "css": "2.2.1",
+    "react": "16.2.0",
+    "react-dom": "16.2.0"
   },
   "engines": {
     "node": ">= 7.6",
