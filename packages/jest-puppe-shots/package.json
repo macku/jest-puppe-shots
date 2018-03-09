@@ -1,6 +1,6 @@
 {
   "name": "jest-puppe-shots",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "A Jest plugin for creating screenshots of React components with a help of Puppeteer",
   "main": "lib/index.js",
   "repository": {
@@ -39,10 +39,10 @@
     "react-dom": ">= 15.0.0"
   },
   "dependencies": {
-    "styled-components": "^2.0.0",
     "jest-image-snapshot": "^2.3.0",
-    "jest-puppe-shots-env": "^0.6.0",
-    "jest-puppe-shots-preset": "^0.6.0"
+    "jest-puppe-shots-env": "^0.7.0",
+    "jest-puppe-shots-preset": "^0.7.0",
+    "styled-components": "^2.0.0"
   },
   "devDependencies": {
     "css": "^2.2.1",
