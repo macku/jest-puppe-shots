@@ -1,7 +1,7 @@
 # Changelog
 
-<a name="new-release"></a>
-## [new release](https://github.com/macku/jest-puppe-shots/compare/v0.6.0...master) (not released)
+<a name="0.7.0"></a>
+## [0.7.0](https://github.com/macku/jest-puppe-shots/compare/v0.6.0...v0.7.0) (2018-03-09)
 
 ### Bugs
  - Fix running multiple tests when running without `--runInBand` mode. Start own HTTP sever for each test context. 
