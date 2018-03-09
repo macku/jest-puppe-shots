@@ -4,6 +4,6 @@ module.exports = {
     '/node_modules/',
   ],
   collectCoverageFrom: [
-    'lib/**.*js',
+    'packages/**.*js',
   ],
 };
