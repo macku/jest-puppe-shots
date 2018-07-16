@@ -6,7 +6,7 @@
 [![Build Status](https://travis-ci.org/macku/jest-puppe-shots.svg?branch=master)](https://travis-ci.org/macku/jest-puppe-shots)
 [![dependencies Status](https://david-dm.org/macku/jest-puppe-shots/status.svg?path=packages/jest-puppe-shots)](https://david-dm.org/macku/jest-puppe-shots?path=packages/jest-puppe-shots)
 [![devDependencies Status](https://david-dm.org/macku/jest-puppe-shots/dev-status.svg?path=packages/jest-puppe-shots)](https://david-dm.org/macku/jest-puppe-shots?path=packages/jest-puppe-shots&type=dev)
-[![peerDependencies Status](https://david-dm.org/macku/jest-puppe-shots/peer-status.svg?path=packages/jest-puppe-shots)](https://david-dm.org/macku/jest-puppe-shots?path=packages/jest-puppe-shots&type=peer)
+[![peerDependencies Status](https://david-dm.org/macku/jest-puppe-shots/peer-status.svg?path=packages/jest-puppe-shots)](https://david-dm.org/macku/jest-puppe-shots?path=packages/jest-puppe-shots&type=peer) [![Greenkeeper badge](https://badges.greenkeeper.io/macku/jest-puppe-shots.svg)](https://greenkeeper.io/)
 
 A [Jest](https://facebook.github.io/jest/) plugin for creating screenshots of [React](https://reactjs.org/) components with a little help of [Puppeteer](https://github.com/GoogleChrome/puppeteer)
 
