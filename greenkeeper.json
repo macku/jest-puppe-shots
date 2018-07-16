@@ -1,0 +1,12 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "package.json",
+        "packages/jest-puppe-shots-env/package.json",
+        "packages/jest-puppe-shots-preset/package.json",
+        "packages/jest-puppe-shots/package.json"
+      ]
+    }
+  }
+}
