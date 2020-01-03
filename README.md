@@ -158,7 +158,7 @@ Roadmap
 =======
 
  - [ ] Transform the `*.less` and `*.sass` files into **CSS**  code when importing component modules by Jest 
- - [ ] Better support for the [`Eznyme`](http://airbnb.io/enzyme) like API. You should be able to use ex. `get`, or `find` functions after
+ - [ ] Better support for the [`Enzyme`](http://airbnb.io/enzyme) like API. You should be able to use ex. `get`, or `find` functions after
    mounting component
  - [ ] Making screenshots of component parts by ex. selecting DOM nodes
  - [ ] More built-in renderers and support for custom renderers (pass a function)
